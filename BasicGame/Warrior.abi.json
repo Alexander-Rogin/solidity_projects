@@ -1,0 +1,83 @@
+{
+	"ABI version": 2,
+	"version": "2.1",
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"baseStation","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setAttackLevel",
+			"inputs": [
+				{"name":"attack","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getAttackLevel",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "attack",
+			"inputs": [
+				{"name":"opponent","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getAttack",
+			"inputs": [
+				{"name":"attackStrength","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "killFromBase",
+			"inputs": [
+				{"name":"attackerAddress","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getHealth",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "health_",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"health_","type":"uint256"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"health_","type":"uint256"},
+		{"name":"station","type":"address"},
+		{"name":"attackLevel","type":"uint256"}
+	]
+}
