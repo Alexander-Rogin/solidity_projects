@@ -1,0 +1,60 @@
+{
+	"ABI version": 2,
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"pubkey","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "addItem",
+			"inputs": [
+				{"name":"name","type":"bytes"},
+				{"name":"quantity","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "buyItem",
+			"inputs": [
+				{"name":"id","type":"uint32"},
+				{"name":"price","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "deleteItem",
+			"inputs": [
+				{"name":"id","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getItems",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"id","type":"uint32"},{"name":"name","type":"bytes"},{"name":"quantity","type":"uint256"},{"name":"createdAt","type":"uint64"},{"name":"isBought","type":"bool"},{"name":"price","type":"uint32"}],"name":"items","type":"tuple[]"}
+			]
+		},
+		{
+			"name": "getStat",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"paidCount","type":"uint32"},{"name":"unpaidCount","type":"uint32"},{"name":"totalAmountPaid","type":"uint64"}],"name":"stat","type":"tuple"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	]
+}
