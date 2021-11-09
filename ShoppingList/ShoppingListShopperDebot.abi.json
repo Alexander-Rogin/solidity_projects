@@ -21,21 +21,6 @@
 			]
 		},
 		{
-			"name": "getRequiredInterfaces",
-			"inputs": [
-			],
-			"outputs": [
-				{"name":"interfaces","type":"uint256[]"}
-			]
-		},
-		{
-			"name": "debotStart",
-			"inputs": [
-			],
-			"outputs": [
-			]
-		},
-		{
 			"name": "showMainMenu",
 			"inputs": [
 			],
@@ -43,7 +28,7 @@
 			]
 		},
 		{
-			"name": "askItemName",
+			"name": "getStatAndBuyItem",
 			"inputs": [
 				{"name":"index","type":"uint32"}
 			],
@@ -51,17 +36,32 @@
 			]
 		},
 		{
-			"name": "askItemQuantity",
+			"name": "chooseBuyItem",
 			"inputs": [
-				{"name":"itemName","type":"bytes"}
+				{"components":[{"name":"paidCount","type":"uint32"},{"name":"unpaidCount","type":"uint32"},{"name":"totalAmountPaid","type":"uint64"}],"name":"stat","type":"tuple"}
 			],
 			"outputs": [
 			]
 		},
 		{
-			"name": "addItemToList",
+			"name": "enterItemPrice",
 			"inputs": [
-				{"name":"quantityStr","type":"bytes"}
+				{"name":"itemNumberStr","type":"bytes"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "buyItem",
+			"inputs": [
+				{"name":"itemPriceStr","type":"bytes"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "debotStart",
+			"inputs": [
 			],
 			"outputs": [
 			]
@@ -83,7 +83,7 @@
 			]
 		},
 		{
-			"name": "getStat",
+			"name": "getStatAndRemoveItem",
 			"inputs": [
 				{"name":"index","type":"uint32"}
 			],
@@ -99,7 +99,7 @@
 			]
 		},
 		{
-			"name": "deleteTask",
+			"name": "deleteItem",
 			"inputs": [
 				{"name":"itemNumberStr","type":"bytes"}
 			],
@@ -186,6 +186,14 @@
 				{"name":"exitCode","type":"uint32"}
 			],
 			"outputs": [
+			]
+		},
+		{
+			"name": "getRequiredInterfaces",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"interfaces","type":"uint256[]"}
 			]
 		},
 		{
